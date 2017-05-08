@@ -13,19 +13,24 @@ namespace PersonasFormApp
 {
     public partial class FormPersona : Form
     {
+        private MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();
+
         public FormPersona()
         {
             InitializeComponent();
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private void initializeMySQLConnection()
         {
-            MySqlConnectionStringBuilder builder = new MySqlConnectionStringBuilder();            
             builder.Server = "localhost";
             builder.Port = 3306;
             builder.UserID = "root";
             builder.Password = "root";
             builder.Database = "personas";
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
 
             MySqlConnection conn = new MySqlConnection(builder.ToString());
             MySqlCommand cmd = conn.CreateCommand();
@@ -47,6 +52,7 @@ namespace PersonasFormApp
             conn.Open();
             cmd.ExecuteNonQuery();
 
+            MessageBox.Show("Se ha insertado el registro correctamente");
         }
     }
 }
