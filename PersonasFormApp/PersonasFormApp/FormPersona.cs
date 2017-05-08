@@ -31,6 +31,7 @@ namespace PersonasFormApp
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            initializeMySQLConnection();
 
             MySqlConnection conn = new MySqlConnection(builder.ToString());
             MySqlCommand cmd = conn.CreateCommand();
