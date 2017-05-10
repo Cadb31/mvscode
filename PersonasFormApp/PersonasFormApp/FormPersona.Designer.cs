@@ -28,157 +28,102 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblNombre = new System.Windows.Forms.Label();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellidos = new System.Windows.Forms.TextBox();
-            this.lblApellidos = new System.Windows.Forms.Label();
-            this.txtDireccion = new System.Windows.Forms.TextBox();
-            this.lblDireccion = new System.Windows.Forms.Label();
-            this.txtEdad = new System.Windows.Forms.TextBox();
-            this.lblEdad = new System.Windows.Forms.Label();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
+            this.menuStripMain = new System.Windows.Forms.MenuStrip();
+            this.insertarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.insertarMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.consultarMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actualizarMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator = new System.Windows.Forms.ToolStripSeparator();
+            this.salirMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStripMain.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblNombre
+            // menuStripMain
             // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(21, 25);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(47, 13);
-            this.lblNombre.TabIndex = 0;
-            this.lblNombre.Text = "Nombre:";
+            this.menuStripMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.insertarToolStripMenuItem});
+            this.menuStripMain.Location = new System.Drawing.Point(0, 0);
+            this.menuStripMain.Name = "menuStripMain";
+            this.menuStripMain.Size = new System.Drawing.Size(403, 24);
+            this.menuStripMain.TabIndex = 12;
+            this.menuStripMain.Text = "menuStripCrud";
             // 
-            // txtNombre
+            // insertarToolStripMenuItem
             // 
-            this.txtNombre.Location = new System.Drawing.Point(74, 25);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(288, 20);
-            this.txtNombre.TabIndex = 1;
+            this.insertarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.insertarMenuItem,
+            this.consultarMenuItem,
+            this.eliminarMenuItem,
+            this.actualizarMenuItem,
+            this.toolStripSeparator,
+            this.salirMenuItem});
+            this.insertarToolStripMenuItem.Name = "insertarToolStripMenuItem";
+            this.insertarToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
+            this.insertarToolStripMenuItem.Text = "Archivo";
             // 
-            // txtApellidos
+            // insertarMenuItem
             // 
-            this.txtApellidos.Location = new System.Drawing.Point(74, 51);
-            this.txtApellidos.Name = "txtApellidos";
-            this.txtApellidos.Size = new System.Drawing.Size(288, 20);
-            this.txtApellidos.TabIndex = 3;
+            this.insertarMenuItem.Name = "insertarMenuItem";
+            this.insertarMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.insertarMenuItem.Text = "Insertar";
+            this.insertarMenuItem.Click += new System.EventHandler(this.insertarMenuItem_Click);
             // 
-            // lblApellidos
+            // consultarMenuItem
             // 
-            this.lblApellidos.AutoSize = true;
-            this.lblApellidos.Location = new System.Drawing.Point(21, 51);
-            this.lblApellidos.Name = "lblApellidos";
-            this.lblApellidos.Size = new System.Drawing.Size(52, 13);
-            this.lblApellidos.TabIndex = 2;
-            this.lblApellidos.Text = "Apellidos:";
+            this.consultarMenuItem.Name = "consultarMenuItem";
+            this.consultarMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.consultarMenuItem.Text = "Consultar";
             // 
-            // txtDireccion
+            // eliminarMenuItem
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(74, 77);
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Size = new System.Drawing.Size(288, 20);
-            this.txtDireccion.TabIndex = 5;
+            this.eliminarMenuItem.Name = "eliminarMenuItem";
+            this.eliminarMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eliminarMenuItem.Text = "Eliminar";
             // 
-            // lblDireccion
+            // actualizarMenuItem
             // 
-            this.lblDireccion.AutoSize = true;
-            this.lblDireccion.Location = new System.Drawing.Point(21, 77);
-            this.lblDireccion.Name = "lblDireccion";
-            this.lblDireccion.Size = new System.Drawing.Size(55, 13);
-            this.lblDireccion.TabIndex = 4;
-            this.lblDireccion.Text = "Direccion:";
+            this.actualizarMenuItem.Name = "actualizarMenuItem";
+            this.actualizarMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.actualizarMenuItem.Text = "Actualizar";
             // 
-            // txtEdad
+            // toolStripSeparator
             // 
-            this.txtEdad.Location = new System.Drawing.Point(74, 103);
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Size = new System.Drawing.Size(288, 20);
-            this.txtEdad.TabIndex = 7;
+            this.toolStripSeparator.Name = "toolStripSeparator";
+            this.toolStripSeparator.Size = new System.Drawing.Size(149, 6);
             // 
-            // lblEdad
+            // salirMenuItem
             // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(21, 103);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(35, 13);
-            this.lblEdad.TabIndex = 6;
-            this.lblEdad.Text = "Edad:";
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(74, 129);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(288, 20);
-            this.txtEmail.TabIndex = 9;
-            // 
-            // lblEmail
-            // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(21, 129);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(35, 13);
-            this.lblEmail.TabIndex = 8;
-            this.lblEmail.Text = "Email:";
-            // 
-            // btnCancelar
-            // 
-            this.btnCancelar.Location = new System.Drawing.Point(205, 176);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 10;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(287, 176);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
-            this.btnGuardar.TabIndex = 11;
-            this.btnGuardar.Text = "Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            this.salirMenuItem.Name = "salirMenuItem";
+            this.salirMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirMenuItem.Text = "Salir";
+            this.salirMenuItem.Click += new System.EventHandler(this.salirMenuItem_Click);
             // 
             // FormPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(403, 221);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.txtEmail);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtEdad);
-            this.Controls.Add(this.lblEdad);
-            this.Controls.Add(this.txtDireccion);
-            this.Controls.Add(this.lblDireccion);
-            this.Controls.Add(this.txtApellidos);
-            this.Controls.Add(this.lblApellidos);
-            this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.lblNombre);
+            this.Controls.Add(this.menuStripMain);
+            this.MainMenuStrip = this.menuStripMain;
             this.Name = "FormPersona";
             this.Text = "Personas";
+            this.menuStripMain.ResumeLayout(false);
+            this.menuStripMain.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblNombre;
-        private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox txtApellidos;
-        private System.Windows.Forms.Label lblApellidos;
-        private System.Windows.Forms.TextBox txtDireccion;
-        private System.Windows.Forms.Label lblDireccion;
-        private System.Windows.Forms.TextBox txtEdad;
-        private System.Windows.Forms.Label lblEdad;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.MenuStrip menuStripMain;
+        private System.Windows.Forms.ToolStripMenuItem insertarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem insertarMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem consultarMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actualizarMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator;
+        private System.Windows.Forms.ToolStripMenuItem salirMenuItem;
     }
 }
 

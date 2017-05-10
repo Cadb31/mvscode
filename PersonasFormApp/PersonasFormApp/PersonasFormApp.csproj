@@ -46,16 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\ConexionBaseDatos.cs" />
     <Compile Include="FormPersona.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormPersona.Designer.cs">
       <DependentUpon>FormPersona.cs</DependentUpon>
     </Compile>
+    <Compile Include="InUpPersona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InUpPersona.Designer.cs">
+      <DependentUpon>InUpPersona.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Persona.cs" />
+    <Compile Include="Dao\PersonaDao.cs" />
+    <Compile Include="Dao\PersonaDaoImpl.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormPersona.resx">
       <DependentUpon>FormPersona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InUpPersona.resx">
+      <DependentUpon>InUpPersona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
