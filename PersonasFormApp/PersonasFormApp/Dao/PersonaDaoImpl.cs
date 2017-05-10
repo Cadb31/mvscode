@@ -12,23 +12,41 @@ namespace PersonasFormApp
     {
         ConexionBaseDatos conexionBaseDatos;
 
-        public PersonaDaoImpl(ConexionBaseDatos conexionBaseDatos) {
+        public PersonaDaoImpl(ConexionBaseDatos conexionBaseDatos)
+        {
             this.conexionBaseDatos = conexionBaseDatos;
         }
-        
+
         bool PersonaDao.actualizar(Persona personaActual, Persona personaNueva)
         {
             throw new NotImplementedException();
         }
 
-        bool PersonaDao.consultar(Persona persona)
+        List<Persona> PersonaDao.consultar(Persona persona)
         {
             throw new NotImplementedException();
         }
 
-        bool PersonaDao.consultarTodas()
+        List<Persona> PersonaDao.consultarTodas()
         {
-            throw new NotImplementedException();
+            MySqlCommand cmd = conexionBaseDatos.Connection.CreateCommand();
+            cmd.CommandText = "SELECT id, nombre, apellidos, direccion, edad, email FROM persona";
+            conexionBaseDatos.Connection.Open();
+            MySqlDataReader dataReader = cmd.ExecuteReader();
+
+            List<Persona> personas = new List<Persona>();
+
+            while (dataReader.Read())
+            {
+                personas.Add(new Persona(dataReader.GetInt16("id"),
+                                        dataReader.GetString("nombre"),
+                                        dataReader.GetString("apellidos"),
+                                        dataReader.GetString("direccion"),
+                                        dataReader.GetInt16("edad"),
+                                        dataReader.GetString("email")));
+            }
+
+            return personas;
         }
 
         bool PersonaDao.eliminar(Persona persona)
@@ -37,7 +55,7 @@ namespace PersonasFormApp
         }
 
         bool PersonaDao.insertar(Persona persona)
-        {            
+        {
             MySqlCommand cmd = conexionBaseDatos.Connection.CreateCommand();
 
             cmd.CommandText = "INSERT INTO persona (nombre, apellidos, direccion, edad, email) VALUES(?nombre, ?apellidos, ?direccion, ?edad, ?email)";

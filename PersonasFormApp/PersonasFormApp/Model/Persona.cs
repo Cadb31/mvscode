@@ -47,5 +47,16 @@ namespace PersonasFormApp
         public string Direccion { get => direccion; set => direccion = value; }
         public int Edad { get => edad; set => edad = value; }
         public string Email { get => email; set => email = value; }
+
+
+        override public String ToString() {
+            String objString = "id: " + id + 
+                " nombre: " + nombre + 
+                " apellidos: " + apellidos + 
+                " direccion: " + direccion + 
+                " edad: " + edad + 
+                " email: " + email;
+            return objString;
+        }
     }
 }

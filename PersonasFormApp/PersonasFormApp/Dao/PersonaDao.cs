@@ -9,8 +9,8 @@ namespace PersonasFormApp
     interface PersonaDao
     {
         Boolean insertar (Persona persona);
-        Boolean consultar(Persona persona);
-        Boolean consultarTodas();
+        List<Persona> consultar(Persona persona);
+        List<Persona> consultarTodas();
         Boolean actualizar(Persona personaActual, Persona personaNueva);
         Boolean eliminar(Persona persona);
     }
