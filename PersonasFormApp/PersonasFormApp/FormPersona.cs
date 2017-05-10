@@ -20,13 +20,19 @@ namespace PersonasFormApp
 
         private void insertarMenuItem_Click(object sender, EventArgs e)
         {
-            InUpPersona inUpPersona = new InUpPersona();
+            FormInUpPersona inUpPersona = new FormInUpPersona();
             inUpPersona.Show();
         }
 
         private void salirMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void consultarMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConsultar consultar = new FormConsultar();
+            consultar.Show();
         }
     }
 }

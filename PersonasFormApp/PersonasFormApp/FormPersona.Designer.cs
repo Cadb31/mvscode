@@ -74,6 +74,7 @@
             this.consultarMenuItem.Name = "consultarMenuItem";
             this.consultarMenuItem.Size = new System.Drawing.Size(152, 22);
             this.consultarMenuItem.Text = "Consultar";
+            this.consultarMenuItem.Click += new System.EventHandler(this.consultarMenuItem_Click);
             // 
             // eliminarMenuItem
             // 

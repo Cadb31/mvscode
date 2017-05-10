@@ -1,6 +1,6 @@
 ﻿namespace PersonasFormApp
 {
-    partial class InUpPersona
+    partial class FormInUpPersona
     {
         /// <summary>
         /// Required designer variable.

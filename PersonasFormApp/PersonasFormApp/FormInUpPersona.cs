@@ -10,12 +10,12 @@ using System.Windows.Forms;
 
 namespace PersonasFormApp
 {
-    public partial class InUpPersona : Form
+    public partial class FormInUpPersona : Form
     {
         private static String VOID = "";
         private PersonaDao personaDao;
 
-        public InUpPersona()
+        public FormInUpPersona()
         {
             InitializeComponent();
             ConexionBaseDatos conexionBaseDatos = new ConexionBaseDatos();
