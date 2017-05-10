@@ -3,8 +3,23 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <style type="text/css">
+        #Text1 {
+            margin-right: 10px;
+        }
+    </style>
+    <script>
+        function saludar() {
+            var obj = document.getElementById("txtNombre");
+            alert("Hola " + obj.value);
+        }        
+    </script>
 </head>
 <body>
-    <label>Hola Mundo C#</label>
+    &nbsp;<div>
+    <label>Introduce tu nombre:
+        <br />
+        </label>
+        <input id="txtNombre" name="txtNombre" type="text" value=""/><input id="btnSaludar" type="button" value="Saludar" onclick="saludar()"/></div>
 </body>
 </html>
