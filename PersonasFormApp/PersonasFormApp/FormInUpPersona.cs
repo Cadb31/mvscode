@@ -22,6 +22,14 @@ namespace PersonasFormApp
             personaDao = new PersonaDaoImpl(conexionBaseDatos);
         }
 
+        public FormInUpPersona(Persona p)
+        {
+            InitializeComponent();
+            ConexionBaseDatos conexionBaseDatos = new ConexionBaseDatos();
+            personaDao = new PersonaDaoImpl(conexionBaseDatos);
+            fillText(p);
+        }
+
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             String nombre = txtNombre.Text;
@@ -61,6 +69,14 @@ namespace PersonasFormApp
             txtDireccion.Text = VOID;
             txtEdad.Text = VOID;
             txtEmail.Text = VOID;
+        }
+
+        private void fillText(Persona p) {
+            txtNombre.Text = p.Nombre;
+            txtApellidos.Text = p.Apellidos;
+            txtDireccion.Text = p.Direccion;
+            txtEdad.Text = p.Edad.ToString();
+            txtEmail.Text = p.Email;
         }
     }
 }

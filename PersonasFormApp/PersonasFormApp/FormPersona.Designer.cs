@@ -45,7 +45,7 @@
             this.insertarToolStripMenuItem});
             this.menuStripMain.Location = new System.Drawing.Point(0, 0);
             this.menuStripMain.Name = "menuStripMain";
-            this.menuStripMain.Size = new System.Drawing.Size(403, 24);
+            this.menuStripMain.Size = new System.Drawing.Size(889, 24);
             this.menuStripMain.TabIndex = 12;
             this.menuStripMain.Text = "menuStripCrud";
             // 
@@ -81,12 +81,14 @@
             this.eliminarMenuItem.Name = "eliminarMenuItem";
             this.eliminarMenuItem.Size = new System.Drawing.Size(152, 22);
             this.eliminarMenuItem.Text = "Eliminar";
+            this.eliminarMenuItem.Click += new System.EventHandler(this.eliminarMenuItem_Click);
             // 
             // actualizarMenuItem
             // 
             this.actualizarMenuItem.Name = "actualizarMenuItem";
             this.actualizarMenuItem.Size = new System.Drawing.Size(152, 22);
             this.actualizarMenuItem.Text = "Actualizar";
+            this.actualizarMenuItem.Click += new System.EventHandler(this.actualizarMenuItem_Click);
             // 
             // toolStripSeparator
             // 
@@ -104,8 +106,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 221);
+            this.ClientSize = new System.Drawing.Size(889, 498);
             this.Controls.Add(this.menuStripMain);
+            this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStripMain;
             this.Name = "FormPersona";
             this.Text = "Personas";

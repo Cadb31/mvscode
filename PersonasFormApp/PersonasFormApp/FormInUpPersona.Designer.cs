@@ -153,7 +153,7 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // InUpPersona
+            // FormInUpPersona
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -171,8 +171,8 @@
             this.Controls.Add(this.lblApellidos);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lblNombre);
-            this.Name = "InUpPersona";
-            this.Text = "InUpPersona";
+            this.Name = "FormInUpPersona";
+            this.Text = "Persona";
             this.ResumeLayout(false);
             this.PerformLayout();
 

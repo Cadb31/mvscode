@@ -21,6 +21,7 @@ namespace PersonasFormApp
         private void insertarMenuItem_Click(object sender, EventArgs e)
         {
             FormInUpPersona inUpPersona = new FormInUpPersona();
+            inUpPersona.MdiParent = this;
             inUpPersona.Show();
         }
 
@@ -31,8 +32,23 @@ namespace PersonasFormApp
 
         private void consultarMenuItem_Click(object sender, EventArgs e)
         {
-            FormConsultar consultar = new FormConsultar();
-            consultar.Show();
+            FormBusqueda busqueda = new FormBusqueda('C');
+            busqueda.MdiParent = this;
+            busqueda.Show();
+        }
+
+        private void eliminarMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBusqueda busqueda = new FormBusqueda('E');
+            busqueda.MdiParent = this;
+            busqueda.Show();
+        }
+
+        private void actualizarMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBusqueda busqueda = new FormBusqueda('A');
+            busqueda.MdiParent = this;
+            busqueda.Show();
         }
     }
 }
